@@ -1,0 +1,107 @@
+.all-chat-container {
+    position: fixed; /* Фиксированное положение поверх всех элементов */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование по экрану */
+    
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 800px;
+    width: 500px;
+    min-width: 200px;
+    background-color: rgb(97,97,97);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Высокий z-index, чтобы окно было выше всех элементов */
+}
+
+/* Затемнение фона при открытии формы */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Прозрачный тёмный фон */
+    z-index: 999; /* Чуть ниже самой формы */
+}
+
+.all-chats-items {
+    width: 100%;
+    height: 700px;
+    overflow: auto;
+}
+
+.all-chats-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.all-chats-items::-webkit-scrollbar-thumb {
+    background-color: rgb(255, 255, 255);
+    border-radius: 3px;
+}
+
+
+
+
+
+.chat-item {
+    width: 95%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.close-container {
+    /* background-color: black; */
+    display: flex;
+    justify-content: flex-end;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.close-container button {
+    all: unset;
+    padding: 4px 4px 0 4px;
+    font-size: 20px;
+    transition: 0.15s ease-in;
+}
+
+.close-container button:hover {
+    color:  rgb(70, 111, 245);
+}
+
+.all-chats-input-container {
+    display: flex;
+    justify-content: center;
+}
+
+.all-chats-input-field {
+    width: 100%;
+    min-width: 200px;
+    padding: 5px 5px 4px 4px ;
+
+    background-color: rgb(95, 95, 95);
+    color: white;
+    border: none;
+    outline: none;
+
+
+    border-bottom: 1px solid rgb(104, 139, 255);
+    border-top: 1px solid rgb(104, 139, 255);
+
+}
+
+.all-chats-input-field::placeholder {
+    color: white;
+}
+
+.all-chats-input-field:focus {
+    box-shadow: 0px 4px 3px -3px rgba(150, 178, 255, 0.7), /* нижняя тень */
+                0px -4px 3px -3px rgba(150, 178, 255, 0.7); /* верхняя тень */
+
+}

@@ -1,0 +1,40 @@
+// {
+//     "version": "0.2.0",
+//     "configurations": [
+//         {
+//             "name": "FastAPI Debug",
+//             "type": "debugpy",
+//             "request": "launch",
+//             "module": "uvicorn",
+//             "args": [
+//                 "app.main:app",  // Убедись, что путь правильный
+//                 "--host", "127.0.0.1",
+//                 "--port", "8000",
+//                 "--reload"
+//             ],
+//             "envFile": "${workspaceFolder}/.env",
+//             "jinja": true,
+//             "cwd": "${workspaceFolder}/backend"  // Запуск из папки backend
+//         }
+//     ]
+// }
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "FastAPI Debug",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "uvicorn",
+            "args": [
+                "app.main:app",  // Убедись, что путь правильный
+                "--host", "0.0.0.0",  // Слушать все адреса, чтобы приложение было доступно с телефона
+                "--port", "8000",
+                "--reload"
+            ],
+            "envFile": "${workspaceFolder}/.env",
+            "jinja": true,
+            "cwd": "${workspaceFolder}/backend"  // Запуск из папки backend
+        }
+    ]
+}

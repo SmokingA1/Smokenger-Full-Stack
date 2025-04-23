@@ -1,0 +1,205 @@
+.container-chat-info {
+    position: fixed;  /* Чтобы контейнер был по центру экрана */
+    width: 600px;
+    height: 90%;
+    min-height: 250px;
+    max-height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);  /* Центрирует контейнер */
+    z-index: 1000;  /* Контейнер будет выше других элементов */
+    padding: 25px;
+    
+    background: rgb(102, 102, 102);  /* Фон контейнера */
+    border: 10px solid rgb(90, 90, 90);
+    border-radius: 10px;  /* Сглаженные углы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);  /* Тень вокруг контейнера */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 1.2rem;
+    color: #fff;
+
+}
+
+.container-chat-members {
+    height: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+    
+.chat-info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+#chat-info-members {
+    display: flex;
+    justify-content: center;
+}
+
+#chat-info-name {
+    font-size: 120%;
+    color: rgb(226, 226, 226);
+    font-weight: 500;
+}
+
+#chat-info-additionaly {
+    display: flex;
+    background: none;
+    border: none;
+    transition: 0.15s ease-in;
+    color: #2e2d2d;
+    font-size: 1.4rem;
+}
+
+.cinfobtns {
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 10px;
+    transition: 0.10s ease-in;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3) ;
+}
+
+/* chat and join buttons */
+.chat-info-cj-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chat-info-join-button {
+    background-color: rgb(250, 252, 151);
+    border: none;
+}
+
+.chat-info-join-button:hover {
+    background-color: rgb(221, 223, 120);
+}
+
+
+.chat-info-cancel-button {
+    background-color: rgb(214, 214, 214);
+    border: none;
+}
+
+
+.chat-info-cancel-button:hover {
+    background-color: rgb(172, 172, 172);
+    border-color: rgb(172, 172, 172);
+
+}
+
+#chat-container-additional-actions {
+    position: relative;
+    display: flex;
+}
+
+#chat-info-additionaly-form {
+    position: absolute;
+    left: 100%;
+    left: 65px;
+    top: 20px;
+    width: 200px;
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+/* 
+.chat-leave-button {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(56, 55, 55, 0.9);
+    color: #fff;
+    padding: 5px 0;
+} */
+
+.chat-butt {
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgba(56, 55, 55, 1);
+    color: #fff;
+    padding: 5px 0;
+}
+
+.chat-member {
+    padding: 5px 0 5px 5px;
+    transition: 0.1s ease-in;
+}
+.chat-member:hover {
+    background-color: rgb(46, 45, 45);
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+
+.input-search-user-form {
+    display: inline;
+}
+
+.input-search-user-field {
+    width: 85%;
+    border: none;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 10px 0 0 10px;
+}
+
+.input-search-user-field::placeholder{
+    color: rgb(0, 0, 0);
+}
+
+
+.search-user-button {
+    width: 15%;
+    border: none;
+    padding: 5px;
+    border-radius: 0 10px 10px 0;
+
+    background-color: rgb(202, 168, 55);
+
+    
+}
+
+.cnt2 {
+    gap: 20px;
+}
+
+.button-close-search-form {
+    margin-top: auto;
+}
+
+.input-search-user-user {
+    display: flex;
+}
+
+.input-search-user-user-info{
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(46, 45, 45);
+    color: #fff;
+
+}
+
+.input-search-user-button-add {
+    margin-left: auto;
+    width: 20%  ;
+}

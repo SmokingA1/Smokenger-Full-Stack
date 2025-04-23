@@ -1,0 +1,199 @@
+.chats-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgb(58, 58, 58);
+    background-color: rgb(97, 97, 97);
+    min-width: 250px;
+    overflow-y: auto;
+}
+
+.add-chat-button {
+    width: 95%;
+    padding: 8px;
+    background-color: rgb(126, 125, 125);
+    border: 1px solid rgb(126, 125, 125);
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 0.1s ease-in;
+    transform-origin: left;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px 0 10px 0;    
+}
+
+.add-chat-button:hover {
+    background-color: rgb(104, 104, 104);
+    border-color: rgb(104, 104, 104);
+}
+
+.chat-add-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: 400px;
+    height: 300px;
+    max-width: 90%;
+    border-radius: 5px;
+    border: 1px solid black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #616161;
+    padding: 0px 15px 15px 15px;
+    z-index: 100;
+}
+
+.chat-add-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    height: 100%;
+    margin: 0 20px;
+}
+
+.chat-add-form label {
+    color: white;
+}
+
+.chat-add-form-name-input {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 4px;
+    outline: none;
+}
+
+.chat-add-form-name-input:focus {
+    border-color: #4A90E2; 
+    box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.3);
+    background-color: #f9fcff; 
+}
+
+.confirm-add-chat-button {
+    margin-top: auto;
+    padding: 4px;
+    background-color: rgb(96, 133, 255);
+    border: 1px solid rgb(96, 133, 255);
+    color: #fff;
+    transition: 0.1s ease-in;
+    border-radius: 8px;
+
+}
+
+.confirm-add-chat-button:hover {
+    background-color: rgb(70, 111, 245);
+   
+}
+
+#chkbx {
+    align-self: flex-start;
+}
+
+.close-chat-add-container {
+    display: flex;
+    justify-content: flex-end;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+
+.close-container-button {
+    all: unset;
+    padding: 4px 0 0 4px;
+    font-size: 20px;
+    transition: 0.15s ease-in;
+}
+
+
+.close-container-button:hover {
+    color:  rgb(70, 111, 245);
+}
+
+
+.bi-plus {
+    font-size: 18px;
+}
+
+
+.chat-own-item {
+    width: 100%;
+    color: black;
+    height:70px;
+    padding: 10px;
+    transition: 0.1s ease-in;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+.chat-own-item:hover {
+    background-color: rgb(75, 74, 74);
+}
+
+.chat-icon-default {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    justify-self: flex-end;
+}
+
+
+
+.marquee-wrapper {
+    width: 150px;
+    overflow: hidden;
+    position: relative;
+}
+
+.chats-own-name {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+
+.chats-own-name::after {
+    content: "..."; /* Добавляем знак "+" перед многоточием */
+    display: inline-block;
+}
+
+
+/* @keyframes marquee {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+} */
+
+
+
+@media (max-width: 600px) {
+    .chat-own-item img{
+        display: none;
+    }
+
+
+    .chats-container {
+        min-width: 50px;
+    }
+
+    .chats-own-name {
+        width: 50px;
+    }
+
+}
